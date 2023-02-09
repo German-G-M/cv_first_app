@@ -139,10 +139,10 @@ with st_cuadro:
             col3_text.write(f"<h2 style='text-align:center; color:green;'>{int(anchura)}</h2>",unsafe_allow_html=True)
 
             ##Para mostrar la pantalla en la páginaWeb
-            #imagen_recortada=cv2.resize(imagen,(0,0),fx=0.8,fy=0.8)
-            #imagen_recortada=redimension_imagen(imagen=imagen_recortada,anchura=900)
+            imagen=cv2.resize(imagen,(0,0),fx=0.8,fy=0.8)
+            #imagen=redimension_imagen(imagen=imagen,anchura=900)
 
             st_cuadro.image(imagen,channels='BGR',use_column_width=True)
-            #st_cuadro.image(imagen_recortada,channels='BGR',use_column_width=True)
-            time.sleep(0.05)
+            
+            #time.sleep(0.05)
             
