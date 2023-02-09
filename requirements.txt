@@ -1,7 +1,7 @@
 streamlit
+opencv-python-headless
+mediapipe
 numpy
 time
 PIL
-opencv-python-headless
-mediapipe
 tempfile
