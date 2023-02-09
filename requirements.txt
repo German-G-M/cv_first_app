@@ -1,0 +1,7 @@
+streamlit
+tempfile
+numpy
+time
+PIL
+opencv-python-headless
+mediapipe
