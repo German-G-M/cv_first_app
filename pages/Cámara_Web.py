@@ -145,7 +145,7 @@ with st_cuadro:
             #imagen=redimension_imagen(imagen=imagen,anchura=900)
 
             st_cuadro.image(imagen,channels='BGR',use_column_width=True)
-            st.image(imagen)
+            #st.image(imagen)
             
-            time.sleep(0.09)
+            time.sleep(0.45)
             
