@@ -144,5 +144,5 @@ with st_cuadro:
 
             st_cuadro.image(imagen,channels='BGR',use_column_width=True)
             #st_cuadro.image(imagen_recortada,channels='BGR',use_column_width=True)
-            time.sleep(0.01)
+            time.sleep(0.05)
             
