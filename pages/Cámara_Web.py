@@ -147,5 +147,5 @@ with st_cuadro:
             st_cuadro.image(imagen,channels='BGR',use_column_width=True)
             #st.image(imagen)
             
-            time.sleep(0.14)
+            time.sleep(0.15)
             
