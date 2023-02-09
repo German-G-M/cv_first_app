@@ -1,5 +1,5 @@
 streamlit
-tempfile
+tempfile = "*"
 numpy
 time
 PIL
