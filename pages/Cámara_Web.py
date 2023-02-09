@@ -114,7 +114,7 @@ def redimension_imagen(imagen,anchura=None,altura=None,interp=cv2.INTER_AREA):
 
 ##===========fin apartado funciones
 tiempoAnterior=0
-with st_cuadro.container():
+with st_cuadro:
     with mp_holistic.Holistic(min_detection_confidence=nivel_confianza_deteccion,min_tracking_confidence=nivel_confianza_seguimiento) as holistic:
         while vid.isOpened():
             ret, frame=vid.read()
@@ -144,5 +144,5 @@ with st_cuadro.container():
 
             st_cuadro.image(imagen,channels='BGR',use_column_width=True)
             #st_cuadro.image(imagen_recortada,channels='BGR',use_column_width=True)
-            #time.sleep(0.01)
-            st_cuadro.empty()
+            time.sleep(0.01)
+            
