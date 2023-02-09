@@ -53,8 +53,8 @@ altura=int(vid.get(cv2.CAP_PROP_FRAME_HEIGHT))
 entrada_fps=int(vid.get(cv2.CAP_PROP_FPS))
 
 ##Parte de grabación
-codec=cv2.VideoWriter_fourcc('M','J','P','G')
-salida=cv2.VideoWriter('salida1.mp4',codec,entrada_fps,(anchura,altura))
+#codec=cv2.VideoWriter_fourcc('M','J','P','G')
+#salida=cv2.VideoWriter('salida1.mp4',codec,entrada_fps,(anchura,altura))
 
 st.sidebar.text('Video de entrada')
 st.sidebar.video(archivo_temporal.name)
