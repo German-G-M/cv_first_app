@@ -4,4 +4,3 @@ mediapipe
 numpy
 python-time
 Pillow
-tempfile
