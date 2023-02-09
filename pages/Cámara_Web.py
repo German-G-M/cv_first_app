@@ -7,7 +7,7 @@ import time
 import cv2
 import mediapipe as mp
 
-
+@st.cache()
 mp_holistic=mp.solutions.holistic
 mp_drawing=mp.solutions.drawing_utils
 
