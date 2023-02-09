@@ -4,8 +4,7 @@ import numpy as np
 import time
 
 
-#import cv2
-import opencv-python-headless as cv2
+import cv2
 import mediapipe as mp
 
 
