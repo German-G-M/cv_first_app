@@ -3,5 +3,5 @@ opencv-python-headless
 mediapipe
 numpy
 python-time
-PIL
+Pillow
 tempfile
