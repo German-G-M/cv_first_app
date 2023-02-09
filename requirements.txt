@@ -2,6 +2,6 @@ streamlit
 opencv-python-headless
 mediapipe
 numpy
-time
+python-time
 PIL
 tempfile
