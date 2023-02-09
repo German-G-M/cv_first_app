@@ -40,8 +40,8 @@ archivo_temporal=tempfile.NamedTemporaryFile(delete=False)
 if not buffer_archivo_video:
     if cam_web:
         #vid=cv2.VideoCapture(1)
-        vid=cv2.VideoCapture(0)
-        #vid=cv2.VideoCapture('rtsp://192.168.1.110:554/ch0_0.h264')
+        #vid=cv2.VideoCapture(0)
+        vid=cv2.VideoCapture('rtsp://192.168.1.110:554/ch0_0.h264')
     else:
         vid=cv2.VideoCapture(DEMO_VIDEO)
         archivo_temporal.name=DEMO_VIDEO
