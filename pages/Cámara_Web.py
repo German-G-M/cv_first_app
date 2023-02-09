@@ -114,7 +114,6 @@ def redimension_imagen(imagen,anchura=None,altura=None,interp=cv2.INTER_AREA):
 
 ##===========fin apartado funciones
 tiempoAnterior=0
-@st.cache()
 with mp_holistic.Holistic(min_detection_confidence=nivel_confianza_deteccion,min_tracking_confidence=nivel_confianza_seguimiento) as holistic:
     while vid.isOpened():
         ret, frame=vid.read()
