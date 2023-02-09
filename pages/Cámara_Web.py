@@ -3,6 +3,8 @@ import tempfile
 import numpy as np
 import time
 
+from PIL import Image
+
 
 import cv2
 import mediapipe as mp
@@ -143,7 +145,7 @@ with st_cuadro:
             #imagen=redimension_imagen(imagen=imagen,anchura=900)
 
             st_cuadro.image(imagen,channels='BGR',use_column_width=True)
-            st.image(imagen,channels='BGR',use_column_width=True)
+            st.image(Image.open(imagen),channels='BGR',use_column_width=True)
             
             #time.sleep(0.05)
             
