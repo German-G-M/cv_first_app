@@ -114,32 +114,33 @@ def redimension_imagen(imagen,anchura=None,altura=None,interp=cv2.INTER_AREA):
 
 ##===========fin apartado funciones
 tiempoAnterior=0
-with mp_holistic.Holistic(min_detection_confidence=nivel_confianza_deteccion,min_tracking_confidence=nivel_confianza_seguimiento) as holistic:
-    while vid.isOpened():
-        ret, frame=vid.read()
-        if not ret:
-            continue
-        #Detección
-        imagen,resultados=mediapipe_detection(frame,holistic)
-        #dibujo Puntos de referencia
-        draw_my_own_landmarks(imagen,resultados)
+with st_cuadro:
+    with mp_holistic.Holistic(min_detection_confidence=nivel_confianza_deteccion,min_tracking_confidence=nivel_confianza_seguimiento) as holistic:
+        while vid.isOpened():
+            ret, frame=vid.read()
+            if not ret:
+                continue
+            #Detección
+            imagen,resultados=mediapipe_detection(frame,holistic)
+            #dibujo Puntos de referencia
+            draw_my_own_landmarks(imagen,resultados)
 
-        ##contador de FPS
-        tiempoActual=time.time()
-        fps=1/(tiempoActual-tiempoAnterior) #1/(tiempo para procesar el loop)
-        tiempoAnterior=tiempoActual
+            ##contador de FPS
+            tiempoActual=time.time()
+            fps=1/(tiempoActual-tiempoAnterior) #1/(tiempo para procesar el loop)
+            tiempoAnterior=tiempoActual
 
-        # if grabacion:
-        #     out.write(frame)
+            # if grabacion:
+            #     out.write(frame)
         
-        ##pantalla principal
-        col1_text.write(f"<h2 style='text-align:center; color:green;'>{int(fps)}</h2>",unsafe_allow_html=True)
-        col2_text.write(f"<h2 style='text-align:center; color:green;'>{int(fps)}</h2>",unsafe_allow_html=True)
-        col3_text.write(f"<h2 style='text-align:center; color:green;'>{int(anchura)}</h2>",unsafe_allow_html=True)
+            ##pantalla principal
+            col1_text.write(f"<h2 style='text-align:center; color:green;'>{int(fps)}</h2>",unsafe_allow_html=True)
+            col2_text.write(f"<h2 style='text-align:center; color:green;'>{int(fps)}</h2>",unsafe_allow_html=True)
+            col3_text.write(f"<h2 style='text-align:center; color:green;'>{int(anchura)}</h2>",unsafe_allow_html=True)
 
-        ##Para mostrar la pantalla en la páginaWeb
-        #imagen_recortada=cv2.resize(imagen,(0,0),fx=0.8,fy=0.8)
-        #imagen_recortada=redimension_imagen(imagen=imagen_recortada,anchura=900)
+            ##Para mostrar la pantalla en la páginaWeb
+            #imagen_recortada=cv2.resize(imagen,(0,0),fx=0.8,fy=0.8)
+            #imagen_recortada=redimension_imagen(imagen=imagen_recortada,anchura=900)
 
-        st_cuadro.image(imagen,channels='BGR',use_column_width=True)
-        #st_cuadro.image(imagen_recortada,channels='BGR',use_column_width=True)
+            st_cuadro.image(imagen,channels='BGR',use_column_width=True)
+            #st_cuadro.image(imagen_recortada,channels='BGR',use_column_width=True)
